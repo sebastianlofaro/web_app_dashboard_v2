@@ -1,0 +1,16 @@
+* {
+  color: red; }
+
+.circle {
+  width: 90px;
+  height: 90px;
+  background-color: purple;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 90px; }
+
+.circle img {
+  width: 50px;
+  vertical-align: middle; }
+
+/*# sourceMappingURL=app.css.map */
