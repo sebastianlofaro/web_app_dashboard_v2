@@ -1,0 +1,37 @@
+
+.social {
+  
+  width: 100%;
+  display: block;
+  .social-box {
+    width: 100%;
+    background: #FBFBFB;
+    border: 2px solid #F1F1F1;
+    display: flex;
+  }
+  .bubble {
+    width: 75px;
+    height: 75px;
+    background: #7278B8;
+    padding: 10px;
+    border-radius: 100%;
+    text-align: center;
+    img {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 85%;
+    }
+  }
+  .stats {
+    margin-left: 10px;
+    h2 {
+      color: #7278b8;
+      margin: 0;
+    }
+    p {
+      font-size: 3em;
+      margin: 0;
+    }
+  }
+}

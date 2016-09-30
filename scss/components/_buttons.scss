@@ -1,0 +1,19 @@
+.notifications {
+  width: 50px;
+}
+
+
+// Message User Butotns
+
+.message-user {
+  padding: 30px;
+  .save {
+    width: 100%;
+    display: block;
+    background: $cButtonAffirmative;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 3px;
+  }
+}

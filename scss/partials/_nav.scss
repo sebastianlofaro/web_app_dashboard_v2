@@ -1,0 +1,71 @@
+
+// Top Nav
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: $cTopNav;
+  color: $cNavText;
+  padding-top: 1px;
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  .appName {
+    display: inline-block;
+    margin-right: auto;
+    h1 {
+      font-size: 1.3em;
+    }
+  }
+  .notifications {
+    margin-left: auto;
+    width: 25px;
+    position: relative;
+    top: 12.5px;
+  }
+}
+
+
+// Side Nav
+
+.side-nav {
+  position: fixed;
+  background-color: $cSideNav;
+  height: 50px;
+  width: 100%;
+  z-index: 90;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  .nav-icon {
+    width: 25px;
+
+  }
+}
+
+
+// Search
+
+.dashboard-top {
+  padding-top: 100px;
+  width: 100%;
+  display: flex;
+  color: $cTextPrimary;
+  h2 {
+    font-size: 1em;
+    padding: 15px;
+    margin: 0;
+  }
+  .search {
+    border-left: 1px solid $cBorder;
+    border-bottom: 1px solid $cBorder;
+    background: $cSecondaryBackground;
+    width: 100%;
+    text-align: right;
+    input {
+      position: relative;
+      right: 15px;
+      top: 12px;
+    }
+  }
+}

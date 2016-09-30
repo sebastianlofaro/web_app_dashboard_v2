@@ -1,0 +1,17 @@
+// Colors by name
+$lightPurple: #7476c0;
+$darkPurple: #4D4D71;
+$white: #fff;
+$dustyGray: #999;
+
+// Colors by location
+$cNavText: $white;
+$cBorder: lighten($dustyGray, 20%);
+$cSecondaryBackground: lighten($dustyGray, 37%);
+$cLink: $lightPurple;
+$cSideNav: $darkPurple;
+$cTopNav: $lightPurple;
+$cButtonNegative: $dustyGray;
+$cButtonAffirmative: $lightPurple;
+$cTextPrimary: $dustyGray;
+$cSocialMedia: $lightPurple;

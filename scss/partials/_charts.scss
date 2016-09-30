@@ -1,0 +1,17 @@
+.dashboard-wrapper {
+  width: 100%;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.chart {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 1px;
+  width: 100%;
+  canvas {
+    padding: 10px;
+  }
+}
