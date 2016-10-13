@@ -17,7 +17,7 @@
       <img src="icons/icon-bell.svg" alt="" />
     </div>
     <div class="user">
-      <img src="" alt="" />
+      <img src="img/sebastian.jpg" alt="" />
       <p class="name">Sebastian Lofaro</p>
     </div>
   </header>
@@ -41,17 +41,20 @@
       <!-- This is where an alert will go. -->
     </div>
 
-    <div class="chart">
-      <canvas id="line-graph" width="400" height="200"></canvas>
+    <div class="chart line-graph">
+      <canvas id="line-graph" width="400" height="150"></canvas>
     </div>
-    <div class="chart">
-      <canvas id="bar-graph" width="400" height="200"></canvas>
-    </div>
-    <div class="chart">
-      <canvas id="pie-chart" width="400" height="200"></canvas>
+    <div class="row clearfix">
+      <div class="chart bar-graph">
+        <canvas id="bar-graph" width="400" height="300"></canvas>
+      </div>
+      <div class="chart pie-chart">
+        <canvas id="pie-chart" width="400" height="300"></canvas>
+      </div>
     </div>
 
     <section class="social">
+      <h3>SOCIAL STATS</h3>
       <div class="twitter social-box">
         <div class="bubble">
           <img src="icons/icon-twitter.svg" alt="" />
@@ -81,104 +84,132 @@
       </div>
     </section>
 
-    <section class="new-members">
-      <h3>NEW MEMBERS</h3>
-      <!-- New members will go here -->
-      <div id="scotty" class="member">
-        <img src="img/scotty.jpg" alt="Photo of Scotty Visser." />
-        <div class="member-info">
-          <p>Scotty Visser</p>
-          <a href="#">scotty.visser@example.com</a>
+    <div class="row clearfix">
+      <section class="new-members">
+        <h3>NEW MEMBERS</h3>
+        <!-- New members will go here -->
+        <div id="scotty" class="member">
+          <img src="img/scotty.jpg" alt="Photo of Scotty Visser." />
+          <div class="member-info">
+            <p>Scotty Visser</p>
+            <a href="#">scotty.visser@example.com</a>
+          </div>
+          <div class="date">
+            <p>1/22/92</p>
+          </div>
         </div>
-      </div>
 
-      <div id="will" class="member">
-        <img src="img/will.jpg" alt="Photo of Will Havens." />
-        <div class="member-info">
-          <p>Will Havens</p>
-          <a href="#">will.havens@example.com</a>
+        <div id="will" class="member">
+          <img src="img/will.jpg" alt="Photo of Will Havens." />
+          <div class="member-info">
+            <p>Will Havens</p>
+            <a href="#">will.havens@example.com</a>
+          </div>
+          <div class="date">
+            <p>1/22/92</p>
+          </div>
         </div>
-      </div>
 
-      <div id="tanner" class="member">
-        <img src="img/tanner.jpg" alt="Photo of Tanner Rembolt." />
-        <div class="member-info">
-          <p>Tanner Rembolt</p>
-          <a href="#">tanner.rembolt@example.com</a>
+        <div id="tanner" class="member">
+          <img src="img/tanner.jpg" alt="Photo of Tanner Rembolt." />
+          <div class="member-info">
+            <p>Tanner Rembolt</p>
+            <a href="#">tanner.rembolt@example.com</a>
+          </div>
+          <div class="date">
+            <p>1/22/92</p>
+          </div>
         </div>
-      </div>
 
-      <div id="chase" class="member">
-        <img src="img/chase.jpg" alt="Photo of Chase Coburn." />
-        <div class="member-info">
-          <p>Chase Coburn</p>
-          <a href="#">chase.coburn@example.com</a>
+        <div id="chase" class="member">
+          <img src="img/chase.jpg" alt="Photo of Chase Coburn." />
+          <div class="member-info">
+            <p>Chase Coburn</p>
+            <a href="#">chase.coburn@example.com</a>
+          </div>
+          <div class="date">
+            <p>1/22/92</p>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="recent-activity">
-      <h3>RECENT ACTIVITY</h3>
-      <!-- Member activity will go here -->
-      <div id="victoria" class="member">
-        <img src="img/victoria.jpg" alt="Photo of Victoria Monette." />
-        <div class="member-info">
-          <p>Victoria Monette liked a photo</p>
-          <p>5 hours ago</p>
+      </section>
+      <section class="recent-activity">
+        <h3>RECENT ACTIVITY</h3>
+        <!-- Member activity will go here -->
+        <div id="victoria" class="member">
+          <img src="img/victoria.jpg" alt="Photo of Victoria Monette." />
+          <div class="member-info">
+            <p>Victoria Monette liked a photo</p>
+            <p>5 hours ago</p>
+          </div>
         </div>
-      </div>
 
-      <div id="erin" class="member">
-        <img src="img/erin.jpg" alt="Photo of Erin Forester." />
-        <div class="member-info">
-          <p>Erin Forester</p>
-          <p>5 hours ago</p>
+        <div id="erin" class="member">
+          <img src="img/erin.jpg" alt="Photo of Erin Forester." />
+          <div class="member-info">
+            <p>Erin Forester</p>
+            <p>5 hours ago</p>
+          </div>
         </div>
-      </div>
 
-      <div id="lesley" class="member">
-        <img src="img/lesley.jpg" alt="Photo of Lesley Moses." />
-        <div class="member-info">
-          <p>Lesley Moses</p>
-          <p>5 hours ago</p>
+        <div id="lesley" class="member">
+          <img src="img/lesley.jpg" alt="Photo of Lesley Moses." />
+          <div class="member-info">
+            <p>Lesley Moses</p>
+            <p>5 hours ago</p>
+          </div>
         </div>
-      </div>
 
-      <div id="vanessa" class="member">
-        <img src="img/vanessa.jpg" alt="Photo of Vanessa Agurie." />
-        <div class="member-info">
-          <p>Vanessa Agurie</p>
-          <p>5 hours ago</p>
+        <div id="vanessa" class="member">
+          <img src="img/vanessa.jpg" alt="Photo of Vanessa Agurie." />
+          <div class="member-info">
+            <p>Vanessa Agurie</p>
+            <p>5 hours ago</p>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="message-user">
-      <h3>MESSAGE USER</h3>
-      <form class="" action="index.html" method="post">
-        <input class= "textfield" type="text" name="userName" value="" placeholder="Search for User">
-        <textarea class= "textfield" name="message" rows="8" cols="40" placeholder="Message for User"></textarea>
-        <input class="save" type="button" name="send" value="SEND">
-      </form>
-    </section>
-    <section class="settings">
-      <h3>SETTINGS</h3>
-      <form class="profile-settings" action="index.html" method="post">
-        <!-- Email Switch -->
-        <label for="email-togle">Send Email Notifications</label>
-        <input id="email-togle" type="checkbox" name="email" value="">
-        <div class="slider"></div>
-        <!-- Profile Privacy -->
-        <label for="privacy-togle">Set Profile to Public</label>
-        <input id="privacy-togle" type="checkbox" name="email" value="">
-        <div class="slider"></div>
-        <select class="timezone" name="timezone">
-          <option value="1">EST</option>
-          <option value="1">CST</option>
-          <option value="1">MST</option>
-        </select>
-        <input type="button" name="save" value="SAVE">
-        <input type="button" name="cancle" value="CANCLE">
-      </form>
-    </section>
+      </section>
+    </div>
+    <div class="row clearfix">
+      <section class="message-user">
+        <h3>MESSAGE USER</h3>
+        <form class="" action="index.html" method="post">
+          <input class= "textfield" type="text" name="userName" value="" placeholder="Search for User">
+          <textarea class= "textfield" name="message" rows="8" cols="40" placeholder="Message for User"></textarea>
+          <input class="send" type="button" name="send" value="SEND">
+        </form>
+      </section>
+      <section class="settings">
+        <h3>SETTINGS</h3>
+        <form class="profile-settings" action="index.html" method="post">
+          <!-- Email Switch -->
+          <div class="email-switch">
+            <label class="switch-label" for="email-togle">Send Email Notifications</label>
+            <label class="toggle">
+              <input id="email-togle" type="checkbox" name="email" value="">
+              <div class="slider"></div>
+            </label>
+          </div>
+
+          <!-- Profile Privacy -->
+          <div class="privacy-switch">
+            <label class="switch-label" for="privacy-togle">Set Profile to Public</label>
+            <label class="toggle">
+              <input id="privacy-togle" type="checkbox" name="email" value="">
+              <div class="slider"></div>
+            </label>
+          </div>
+
+          <select class="timezone" name="timezone">
+            <option value="1">EST</option>
+            <option value="1">CST</option>
+            <option value="1">MST</option>
+          </select>
+          <div class="commmit-buttons">
+            <input class="save" type="button" name="save" value="SAVE">
+            <input class="cancle" type="button" name="cancle" value="CANCLE">
+          </div>
+        </form>
+      </section>
+    </div>
   </div>
   <script type="text/javascript" src="node_modules/chart.js/dist/Chart.min.js"></script>
   <script type="text/javascript" src="js/charts.js"></script>

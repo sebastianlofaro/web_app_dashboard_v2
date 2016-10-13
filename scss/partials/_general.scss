@@ -1,0 +1,19 @@
+.dashboard-wrapper {
+  width: 100%;
+  @include desktop {
+    width: calc(100% - 50px);
+    margin-left: 50px;
+  }
+}
+
+.row {
+  @include desktop {
+    border-top: 1px solid $cBorder;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

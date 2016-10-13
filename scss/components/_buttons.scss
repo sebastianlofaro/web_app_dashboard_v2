@@ -1,3 +1,8 @@
+:focus {
+  outline: none;
+}
+
+
 .notifications {
   width: 50px;
 }
@@ -6,8 +11,7 @@
 // Message User Butotns
 
 .message-user {
-  padding: 30px;
-  .save {
+  .send {
     width: 100%;
     display: block;
     background: $cButtonAffirmative;
@@ -15,5 +19,69 @@
     padding: 10px;
     color: white;
     border-radius: 3px;
+    height: 38px;
+  }
+}
+
+
+// Settings Buttons
+
+.settings {
+  .toggle {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+    input {
+      display: none;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $cButtonNegative;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 17px;
+    }
+    .slider::before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: $white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 13px;
+    }
+    input:checked + .slider {
+      background: $cButtonAffirmative;
+    }
+    input:checked + .slider::before {
+      transform: translateX(46px);
+    }
+  }
+
+  .save {
+    width: 46%;
+    color: $cButtonText;
+    background: $cButtonAffirmative;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+  }
+  .cancle {
+    width: 46%;
+    color: $cButtonText;
+    background: $cButtonNegative;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+
   }
 }

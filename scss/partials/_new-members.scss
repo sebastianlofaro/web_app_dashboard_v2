@@ -1,24 +1,32 @@
 .new-members {
   color: $cTextPrimary;
-  padding: 30px;
-  border-top: 2px solid #f1f1f1;
+  padding: 0px 30px 0px 30px;
   width: 100%;
+  @include desktop {
+    display: inline-block;
+    width: 50%;
+    float: left;
+  }
   .member {
     display:block;
     padding-top: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #f1f1f1;
+    height: 70px;
     img {
       border-radius: 100%;
-      width: 100px;
-      display: inline-block;
-    }
-    .member-info {
+      width: 50px;
       display: inline-block;
       position: relative;
       top: 50%;
       transform: translateY(-50%);
+      float: left;
+    }
+    .member-info {
+      display: inline-block;
+      margin-left: 10px;
       p {
+        margin: 0;
         width: 100%;
         display: block;
       }
@@ -29,5 +37,12 @@
         text-decoration: none;
       }
     }
+    .date {
+      display: inline-block;
+      float: right;
+    }
+  }
+  .member:last-child {
+    border-bottom: none;
   }
 }

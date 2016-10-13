@@ -1,8 +1,22 @@
 .message-user {
+  color: $cTextPrimary;
+  border-top: 1px solid $cBorder;
+  padding: 0px 30px 30px 30px;
+  @include desktop {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    border-right: 1px solid $cBorder;
+    margin-bottom: 30px;
+  }
   .textfield {
     width: 100%;
     margin-bottom: 10px;
     border-radius: 3px;
+    border: 1px solid $cBorder;
+  }
+  input {
+    height: 2em;
   }
   textarea {
     resize: none;

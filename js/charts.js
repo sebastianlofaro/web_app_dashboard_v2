@@ -30,7 +30,7 @@ var mobileUserData = {
   labels: ['Phones', 'Tablet', 'Desktop'],
   datasets: [{
     data: ['250', '100', '50'],
-    backgroundColor: ['#f00', '#0f0', '#00f']
+    backgroundColor: ['#727ABD', '#78B1BE', '#86C791']
   }]
 };
 

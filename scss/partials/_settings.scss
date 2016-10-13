@@ -1,0 +1,37 @@
+.settings {
+  width: 100%;
+  color: $cTextPrimary;
+  border-top: 1px solid $cBorder;
+  padding: 0px 30px 0px 30px;
+  @include desktop {
+    display: inline-block;
+    width: 50%;
+    float: right;
+  }
+  .email-switch, .privacy-switch {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .switch-label {
+      padding-top: 7px;
+    }
+  }
+  select {
+    width: 100%;
+    margin: 30px 0px 30px 0px;
+    -webkit-appearance: none;  /*REMOVES DEFAULT CHROME & SAFARI STYLE*/
+    -moz-appearance: none;  /*REMOVES DEFAULT FIREFOX STYLE*/
+    border: 1px solid $cBorder;
+    height: 37px;
+    padding: 5px;
+    background: $cSecondaryBackground url(../icons/down-arrow.svg) no-repeat right center;
+  }
+  .commmit-buttons {
+    width: 100%;
+    display: flex;
+    .cancle {
+      margin-left: auto;
+    }
+  }
+}

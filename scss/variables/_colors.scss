@@ -13,5 +13,6 @@ $cSideNav: $darkPurple;
 $cTopNav: $lightPurple;
 $cButtonNegative: $dustyGray;
 $cButtonAffirmative: $lightPurple;
-$cTextPrimary: $dustyGray;
+$cTextPrimary: darken($dustyGray, 20%);
 $cSocialMedia: $lightPurple;
+$cButtonText: $white;
