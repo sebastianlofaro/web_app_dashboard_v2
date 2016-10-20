@@ -2,9 +2,30 @@
   outline: none;
 }
 
+input {
+  cursor: pointer;
+}
 
 .notifications {
   width: 50px;
+}
+
+// Chart Buttons
+.chart-buttons {
+  .button {
+    background: white;
+    color: $cTextPrimary;
+    border: none;
+    border-radius: 23px;
+  }
+  .button:hover {
+    background: $cButtonAffirmativeHover;
+    color: $cChartButtonSelectedText;
+  }
+  .selected {
+    background: $cChartButtonSelected;
+    color: $cChartButtonSelectedText;
+  }
 }
 
 
@@ -20,6 +41,21 @@
     color: white;
     border-radius: 3px;
     height: 38px;
+  }
+  .send:hover {
+    background: $cButtonAffirmativeHover;
+  }
+  .dismiss {
+    background: $cButtonAffirmative;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 3px;
+    height: 38px;
+    width: 150px;
+  }
+  .dismiss:hover {
+    background: $cButtonAffirmativeHover;
   }
 }
 
@@ -75,6 +111,9 @@
     border: none;
     border-radius: 3px;
   }
+  .save:hover {
+    background: $cButtonAffirmativeHover;
+  }
   .cancle {
     width: 46%;
     color: $cButtonText;
@@ -82,6 +121,8 @@
     padding: 10px;
     border: none;
     border-radius: 3px;
-
+  }
+  .cancle:hover {
+    background: $cButtonNegativeHover;
   }
 }

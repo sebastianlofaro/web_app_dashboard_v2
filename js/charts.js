@@ -1,14 +1,13 @@
+// Charts
 var lGraph = document.getElementById("line-graph");
 var bGraph = document.getElementById("bar-graph");
 var pChart = document.getElementById("pie-chart");
 
-// backgroundColor: ['#DDDEF2'],
-// borderColor: ['#B0B3BF'],
 
 var weeklyTrafficData = {
-    labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31', 'test'],
+    labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
     datasets: [{
-        data: [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2000, 1750, 2250],
+        data: [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2000, 1750],
         backgroundColor: 'rgba(227,227,246, 0.7)',
         lineTension: 0,
         pointBorderColor: '#7477BF',
@@ -50,9 +49,13 @@ var pData = {
 }
 
 var myLineChart = new Chart(lGraph, {
-    type: 'line',
-    data: lData,
-
+  type: 'line',
+  data: lData,
+  options: {
+    legend: {
+      display: false
+    }
+  }
 });
 
 
@@ -60,7 +63,12 @@ var myLineChart = new Chart(lGraph, {
 
 var myBarChart = new Chart(bGraph, {
   type: 'bar',
-  data: bData
+  data: bData,
+  options: {
+    legend: {
+      display: false
+    }
+  }
 });
 
 
@@ -68,5 +76,57 @@ var myBarChart = new Chart(bGraph, {
 
 var myBarChart = new Chart(pChart, {
   type: 'doughnut',
-  data: pData
+  data: pData,
+  options: {
+    legend: {
+      position: 'right',
+      labels: {
+        boxWidth: 20,
+        fontSize: 15
+      }
+    }
+  }
+});
+
+
+
+/**************************************
+------------Messaging User-------------
+**************************************/
+
+
+$(".message-user .send").on('click', function () {
+  if ($("#user-to-message").val() === "" && $("#message-for-user").val() === "") {
+    // Both fields empty
+    $("#submit-message").text("Please fill user and message fields.");
+  } else if ($("#user-to-message").val() === "") {
+    // User field empty
+    $("#submit-message").text("Please fill user field.");
+  } else if ($("#message-for-user").val() === "") {
+    // Message field empty
+    $("#submit-message").text("Please fill message field.");
+  }
+  else {
+    // Message sent
+    $("#submit-message").text("Your message was sent!");
+    $("#user-to-message").val('');
+    $("#message-for-user").val('');
+  }
+
+  $(".message-user-wrapper").addClass("blur");
+  $(".send-response").show();
+});
+$(".send-response .dismiss").on("click", function () {
+  $(".message-user-wrapper").removeClass("blur");
+  $(".send-response").hide();
+});
+
+
+/**************************************
+-----------------Alert-----------------
+**************************************/
+
+$("#close-alert").on("click", function () {
+  $(".alert").fadeOut("slow");
+  $("#new-notification").removeClass("new-notification")
 });

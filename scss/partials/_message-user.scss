@@ -2,6 +2,32 @@
   color: $cTextPrimary;
   border-top: 1px solid $cBorder;
   padding: 0px 30px 30px 30px;
+  position: relative;
+  .send-response {
+    display: none;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    h3 {
+      font-size: 1.5em;
+      display: block;
+      position: relative;
+      top: 30%;
+    }
+    input {
+      display: block;
+      position: relative;
+      top: 30%;
+      margin: 0 auto;
+    }
+  }
+  .blur {
+    filter: blur(10px);
+  }
   @include desktop {
     display: inline-block;
     width: 50%;

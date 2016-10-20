@@ -5,6 +5,7 @@
 }
 
 .chart {
+  color: $cTextPrimary;
   margin-top: 25px;
   margin-bottom: 25px;
   padding: 1px;
@@ -12,17 +13,30 @@
   canvas {
     padding: 10px;
   }
+  h3 {
+    margin-top: 0;
+    float: left;
+    margin-left: 30px;
+  }
+}
+
+.line-graph {
+  //text-align: right;
+  .chart-buttons {
+    float: right;
+    margin-right: 20px;
+  }
 }
 
 .bar-graph {
   width: 50%;
   float: left;
-  margin: 0;
+  margin: 25px 0 0 0;
 }
 
 .pie-chart {
   width: 50%;
   float: right;
-  margin: 0;
+  margin: 25px 0 0 0;
   border-left: 1px solid $cBorder;
 }

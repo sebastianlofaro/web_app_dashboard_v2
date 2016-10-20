@@ -10,11 +10,11 @@
   }
   .member {
     display: block;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    // padding-top: 30px;
+    // padding-bottom: 30px;
     border-bottom: 1px solid #f1f1f1;
     height: 70px;
-    img {
+    .profile-pic {
       border-radius: 100%;
       width: 50px;
       display: inline-block;
@@ -23,14 +23,31 @@
       transform: translateY(-50%);
       float: left;
     }
+    .social-activity {
+      margin-left: 5px;
+      width: 25px;
+      position: relative;
+      top: 20%;
+    }
     .member-info {
       display: inline-block;
+      position: relative;
       margin-left: 10px;
+      top: 1px;
+      top: 50%;
+      transform: translateY(-50%);
       p {
         margin: 0;
         width: 100%;
         display: block;
       }
+    }
+    .right-arrow {
+      float: right;
+      width: 25px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
   .member:last-child {

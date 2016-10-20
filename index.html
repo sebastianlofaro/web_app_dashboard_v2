@@ -6,15 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" media="screen" title="no title">
   <link rel="stylesheet" href="css/app.css" media="screen" title="no title">
-  <title>YourApp</title>
+  <title>YourApp&trade;</title>
 </head>
 <body>
   <header>
     <div class="appName">
-      <h1>YourApp</h1>
+      <h1>Your</h1><h1 class="thin">App&trade;</h1>
     </div>
     <div class="notifications">
       <img src="icons/icon-bell.svg" alt="" />
+      <div id="new-notification" class="new-notification"></div>
     </div>
     <div class="user">
       <img src="img/sebastian.jpg" alt="" />
@@ -39,16 +40,27 @@
 
     <div class="alert">
       <!-- This is where an alert will go. -->
+      <p>Alert Don't freak out!</p>
+      <input id="close-alert" type="button" name="close" value="x">
     </div>
 
     <div class="chart line-graph">
+      <h3>TRAFFIC</h3>
+      <div class="chart-buttons">
+        <button class="button" id = "hourly-button" type="button">Hourly</button>
+        <button class="button" id = "daily-button" type="button">Daily</button>
+        <button class="button selected" id = "weekly-button" type="button">Weekly</button>
+        <button class="button" id = "monthly-button" type="button">Monthly</button>
+      </div>
       <canvas id="line-graph" width="400" height="150"></canvas>
     </div>
     <div class="row clearfix">
       <div class="chart bar-graph">
+        <h3>DAILY TRAFFIC</h3>
         <canvas id="bar-graph" width="400" height="300"></canvas>
       </div>
       <div class="chart pie-chart">
+        <h3>MOBILE USERS</h3>
         <canvas id="pie-chart" width="400" height="300"></canvas>
       </div>
     </div>
@@ -132,50 +144,67 @@
           </div>
         </div>
       </section>
+
+
       <section class="recent-activity">
         <h3>RECENT ACTIVITY</h3>
         <!-- Member activity will go here -->
         <div id="victoria" class="member">
-          <img src="img/victoria.jpg" alt="Photo of Victoria Monette." />
+          <img class="profile-pic" src="img/victoria.jpg" alt="Photo of Victoria Monette." />
+          <img class="social-activity" src="icons/like.svg" alt="" />
           <div class="member-info">
-            <p>Victoria Monette liked a photo</p>
+            <p>Victoria Monette liked a photo.</p>
             <p>5 hours ago</p>
           </div>
+          <img class="right-arrow" src="icons/right-arrow.svg" alt="" />
         </div>
 
         <div id="erin" class="member">
-          <img src="img/erin.jpg" alt="Photo of Erin Forester." />
+          <img class="profile-pic" src="img/erin.jpg" alt="Photo of Erin Forester." />
+          <img class="social-activity" src="icons/post.svg" alt="" />
           <div class="member-info">
-            <p>Erin Forester</p>
+            <p>Erin Forester made a new post.</p>
             <p>5 hours ago</p>
           </div>
+          <img class="right-arrow" src="icons/right-arrow.svg" alt="" />
         </div>
 
         <div id="lesley" class="member">
-          <img src="img/lesley.jpg" alt="Photo of Lesley Moses." />
+          <img class="profile-pic" src="img/lesley.jpg" alt="Photo of Lesley Moses." />
+          <img class="social-activity" src="icons/like.svg" alt="" />
           <div class="member-info">
-            <p>Lesley Moses</p>
+            <p>Lesley Moses something.</p>
             <p>5 hours ago</p>
           </div>
+          <img class="right-arrow" src="icons/right-arrow.svg" alt="" />
         </div>
 
         <div id="vanessa" class="member">
-          <img src="img/vanessa.jpg" alt="Photo of Vanessa Agurie." />
+          <img class="profile-pic" src="img/vanessa.jpg" alt="Photo of Vanessa Agurie." />
+          <img class="social-activity" src="icons/chat.svg" alt="" />
           <div class="member-info">
-            <p>Vanessa Agurie</p>
+            <p>Vanessa A. commented.</p>
             <p>5 hours ago</p>
           </div>
+          <img class="right-arrow" src="icons/right-arrow.svg" alt="" />
         </div>
       </section>
     </div>
     <div class="row clearfix">
       <section class="message-user">
-        <h3>MESSAGE USER</h3>
-        <form class="" action="index.html" method="post">
-          <input class= "textfield" type="text" name="userName" value="" placeholder="Search for User">
-          <textarea class= "textfield" name="message" rows="8" cols="40" placeholder="Message for User"></textarea>
-          <input class="send" type="button" name="send" value="SEND">
-        </form>
+        <div class="send-response">
+          <!-- This is the div that will be displayed when you click send. -->
+          <h3 id="submit-message" class="submit-message"></h3>
+          <input class="dismiss" type="button" name="ok" value="Ok">
+        </div>
+        <div class="message-user-wrapper">
+          <h3>MESSAGE USER</h3>
+          <form class="" action="index.html" method="post">
+            <input id="user-to-message" class= "textfield" type="text" name="userName" value="" placeholder="Search for User">
+            <textarea id="message-for-user" class= "textfield" name="message" rows="8" cols="40" placeholder="Message for User"></textarea>
+            <input class="send" type="button" name="send" value="SEND">
+          </form>
+        </div>
       </section>
       <section class="settings">
         <h3>SETTINGS</h3>
@@ -199,6 +228,7 @@
           </div>
 
           <select class="timezone" name="timezone">
+            <option disabled="disabled" selected="selected">Select Timezone</option>
             <option value="1">EST</option>
             <option value="1">CST</option>
             <option value="1">MST</option>
@@ -211,6 +241,7 @@
       </section>
     </div>
   </div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="node_modules/chart.js/dist/Chart.min.js"></script>
   <script type="text/javascript" src="js/charts.js"></script>
 </body>

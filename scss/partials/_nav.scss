@@ -13,8 +13,16 @@ header {
   .appName {
     display: inline-block;
     margin-right: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-25%);
+    margin-left: 10px;
     h1 {
+      display: inline;
       font-size: 1.3em;
+    }
+    .thin {
+      font-weight: 100;
     }
   }
   .notifications {
@@ -23,7 +31,17 @@ header {
     width: 25px;
     position: relative;
     top: 12.5px;
+    .new-notification {
+      position: absolute;
+      height: 5px;
+      width: 5px;
+      border-radius: 100%;
+      background: $cNewAlert;
+      top: 0;
+      right: 0;
+    }
   }
+
   .user {
     border-left: 1px solid $cBorder;
     height: 40px;
@@ -96,7 +114,7 @@ header {
     input {
       position: relative;
       height: 1.6em;
-      width: 300px;
+      width: 250px;
       right: 15px;
       top: calc((50px - 1.6em) / 2);
       border-radius: 5px;
@@ -105,5 +123,27 @@ header {
   }
   @include desktop {
     padding-top: 50px;
+  }
+}
+
+.alert {
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: $cAlertBackground;
+  color: $cAlertText;
+  p {
+    padding: 10px 0 10px 10px;
+    display: inline-block;
+    margin: 0;
+  }
+  input {
+    margin: 0;
+    float: right;
+    background: none;
+    border: none;
+    color: $cAlertText;
+    padding: 10px;
   }
 }

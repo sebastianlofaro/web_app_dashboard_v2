@@ -3,6 +3,7 @@ $lightPurple: #7476c0;
 $darkPurple: #4D4D71;
 $white: #fff;
 $dustyGray: #999;
+$DeYork: #86C791;
 
 // Colors by location
 $cNavText: $white;
@@ -12,7 +13,14 @@ $cLink: $lightPurple;
 $cSideNav: $darkPurple;
 $cTopNav: $lightPurple;
 $cButtonNegative: $dustyGray;
+$cButtonNegativeHover: darken($dustyGray, 20%);
 $cButtonAffirmative: $lightPurple;
+$cButtonAffirmativeHover: $DeYork;
 $cTextPrimary: darken($dustyGray, 20%);
 $cSocialMedia: $lightPurple;
 $cButtonText: $white;
+$cChartButtonSelected: $DeYork;
+$cChartButtonSelectedText: $white;
+$cNewAlert: $DeYork;
+$cAlertBackground: $lightPurple;
+$cAlertText: $white;
