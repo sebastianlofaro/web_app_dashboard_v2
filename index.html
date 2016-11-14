@@ -212,19 +212,27 @@
           <!-- Email Switch -->
           <div class="email-switch">
             <label class="switch-label" for="email-togle">Send Email Notifications</label>
-            <label class="toggle">
-              <input id="email-togle" type="checkbox" name="email" value="">
-              <div class="slider"></div>
-            </label>
+
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="email-togle" checked>
+              <label class="onoffswitch-label" for="email-togle">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+
           </div>
 
           <!-- Profile Privacy -->
           <div class="privacy-switch">
             <label class="switch-label" for="privacy-togle">Set Profile to Public</label>
-            <label class="toggle">
-              <input id="privacy-togle" type="checkbox" name="email" value="">
-              <div class="slider"></div>
-            </label>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="privacy-togle" checked>
+              <label class="onoffswitch-label" for="privacy-togle">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
           </div>
 
           <select class="timezone" name="timezone">
@@ -241,6 +249,9 @@
       </section>
     </div>
   </div>
+
+
+
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="node_modules/chart.js/dist/Chart.min.js"></script>
   <script type="text/javascript" src="js/charts.js"></script>
